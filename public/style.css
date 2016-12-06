@@ -82,8 +82,14 @@ nav {
   border-color: purple;
 }
 
-#intro-button {
-  
+#modal-button {
+  color: green;
+  border-color: green;
+  margin-bottom: 10px;
+}
+#modal-button:hover {
+  color: purple;
+  border-color: purple;
 }
 
 .tarot-explanation {
@@ -128,6 +134,21 @@ nav {
   margin-top: 5%;
 }
 
+#card-modal {
+  margin-top: 2%;
+  width: 60%;
+  height: 400px;
+  margin-left: 20%;
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+#modal-image {
+  margin-top: 50px;
+}
 
 .intro {
   font-family: generalFont;
@@ -136,9 +157,17 @@ nav {
 	color: white;
 }
 
+
 .genres {
   font-family: generalFont;
   font-size: 70px;
   text-align: center;
   color: lightgreen;
+}
+
+.modal-header {
+  font-family: generalFont;
+  font-size: 70px;
+  text-align: center;
+  color: purple;
 }
