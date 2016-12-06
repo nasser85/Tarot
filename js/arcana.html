@@ -1,0 +1,23 @@
+<div id="\arcana">
+	<div class="row">
+		<h1 class="intro">{{title}}</h1>
+		<div class="col s12" ng-repeat="deck in decks">
+			<h2 class="genres">{{deck.name}}</h2>
+			<div ng-repeat="card in deck.cards" class="col s12 m6 l3">
+				<div class="tarot-explanation">
+					<div class="description">
+						<h3>{{card.name}}</h3>
+						<p>{{card.upright}}</p>
+						<p>{{card.reversed}}</p>
+					</div>
+					
+					<img class="tarot-spread" src="{{card.image}}">
+				</div>
+			</div>
+			<div ng-if="decks.indexOf(deck) + 1 == decks.length"class="space col s12 m12 l6">
+				<div class="space tarot-button">{{buttonOne}}</div>
+				<div ng-click="explore()" class="space tarot-button">{{buttonTwo}}</div>
+			</div>
+		</div>
+	</div>
+</div>
