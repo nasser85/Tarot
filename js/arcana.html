@@ -1,10 +1,20 @@
-<div id="\arcana">
+<div id="arcana">
+	<div class="row z-depth-5" ng-if="modal" id="card-modal">
+		<div class="col s12 m4 l4">
+			<img id="modal-image" class="tarot-spread" src="{{cardImage}}">
+		</div>
+		<div class="col s12 m7 l7">
+			<h3 class="modal-header">{{cardName}}</h3>
+			<p>{{cardDescription}}</p>
+			<div id="modal-button" ng-click="closeModal()" class="space tarot-button">Done</div>
+		</div>
+	</div>
 	<div class="row">
 		<h1 class="intro">{{title}}</h1>
 		<div class="col s12" ng-repeat="deck in decks">
 			<h2 class="genres">{{deck.name}}</h2>
 			<div ng-repeat="card in deck.cards" class="col s12 m6 l3">
-				<div class="tarot-explanation">
+				<div ng-click="openModal(card)" class="tarot-explanation">
 					<div class="description">
 						<h3>{{card.name}}</h3>
 						<p>{{card.upright}}</p>
@@ -19,5 +29,7 @@
 				<div ng-click="explore()" class="space tarot-button">{{buttonTwo}}</div>
 			</div>
 		</div>
+	
 	</div>
+	
 </div>
