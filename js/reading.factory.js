@@ -5,7 +5,7 @@ app.factory('ReadingFactory', ['TarotFactory', function(TarotFactory) {
 		var cards;
 		var arr = [];
 		if (deck == "major") {
-			cards = TarotFactory.getMajorArcana();
+			cards = TarotFactory.getMajorArcana()[0].cards;
 		} else {
 			cards = TarotFactory.getAllCards();
 		}
@@ -13,6 +13,7 @@ app.factory('ReadingFactory', ['TarotFactory', function(TarotFactory) {
 			var num = Math.floor(cards.length*Math.random());
 			var flip = Math.floor(2*Math.random());
 			arr.push({card: cards[num], orientation: flip});
+			cards.splice(num, 1);
 		}
 		return arr;
 	}
