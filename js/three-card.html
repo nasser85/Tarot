@@ -1,0 +1,18 @@
+<div id="three-card">
+	<div class="row">
+		<h1 class="intro">Your Three-Card Reading</h1>
+		<h2 class="instructions">Click on each individual card to gain more insight</h2>
+		<div ng-repeat="card in cards" class="col s12 m4 l2 offset-l1">
+			<div class="tarot-explanation">
+				<div class="description">
+					<h3>{{card.card.name}}</h3>
+					<p ng-if="card.orientation == 0" class="greenfont">Upright</P>
+					<p ng-if="card.orientation == 0">{{card.card.upright}}</p>
+					<p ng-if="card.orientation == 1" class="redfont">Reversed</P>
+					<p ng-if="card.orientation == 1" >{{card.card.reversed}}</p>
+				</div>
+				<img ng-class="{flip: card.orientation == 1}" class="tarot-spread" src="{{card.card.image}}">
+			</div>
+		</div>
+	</div>
+</div>

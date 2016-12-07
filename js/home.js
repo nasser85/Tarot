@@ -6,6 +6,12 @@ app.config(function ($stateProvider) {
     });
 });
 
-app.controller('HomeCtrl', function($scope, $rootScope) {
+app.controller('HomeCtrl', function($scope, $state) {
 	document.body.style.backgroundImage = "url(back.jpg)";
+	$scope.consult = function() {
+		$state.go('loading');
+		setTimeout(function() {
+			$state.go('threeCard');
+		}, 1500);
+	}
 });
