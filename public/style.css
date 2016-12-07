@@ -131,6 +131,14 @@ nav {
   font-size: 25px;
   color: lightgreen;
 }
+
+.upright {
+  color: lightgreen;
+}
+
+.reversed {
+  color: magenta;
+}
 .flip {
     -moz-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
