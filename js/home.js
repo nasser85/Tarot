@@ -11,7 +11,7 @@ app.controller('HomeCtrl', function($scope, $state) {
 	$scope.consult = function() {
 		$state.go('loading');
 		setTimeout(function() {
-			$state.go('threeCard', {'deck': 'all'});
+			$state.go('oneCard', {'deck': 'all'});
 		}, 1500);
 	}
 });

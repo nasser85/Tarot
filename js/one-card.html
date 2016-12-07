@@ -1,0 +1,31 @@
+<div id="one-card">
+	<div class="row z-depth-5" ng-if="modal" id="card-modal">
+		<div class="col s12 m4 l4">
+			<img id="modal-image" class="tarot-spread" src="{{cardImage}}">
+		</div>
+		<div class="col s12 m7 l7">
+			<p class="center-align">Your current state is represented by the...</p>
+			<h3 class="modal-header">{{cardName}}</h3>
+			<p class="center-align" ng-if="orientation == 0">...in the <span class="greenfont">upright</span> position which typically points to <em>{{upright}}</em></p>
+			<p class="center-align" ng-if="orientation == 1">...in the <span class="redfont">reversed</span> position which typically points to <em>{{reversed}}</em></p>
+			<p>{{cardDescription}}</p>
+			<div id="modal-button" ng-click="closeModal()" class="space tarot-button">Done</div>
+		</div>
+	</div>
+	<div class="row">
+		<h1 class="intro">Your Introductory Reading</h1>
+		<h2 class="instructions">Click on the card to gain more insight</h2>
+		<div ng-repeat="card in cards" class="col s4 offset-s4 m2 offset-m5 l2 offset-l5">
+			<div ng-click="openModal(card)" class="tarot-explanation">
+				<div class="description">
+					<h3>{{card.card.name}}</h3>
+					<p ng-if="card.orientation == 0" class="greenfont">Upright</P>
+					<p ng-if="card.orientation == 0">{{card.card.upright}}</p>
+					<p ng-if="card.orientation == 1" class="redfont">Reversed</P>
+					<p ng-if="card.orientation == 1" >{{card.card.reversed}}</p>
+				</div>
+				<img ng-class="{flip: card.orientation == 1}" class="tarot-spread" src="{{card.card.image}}">
+			</div>
+		</div>
+	</div>
+</div>
