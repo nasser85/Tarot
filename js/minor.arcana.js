@@ -26,4 +26,11 @@ app.controller('MinorCtrl', function($scope, TarotFactory, $state) {
 	$scope.closeModal = function() {
 		$scope.modal = false;
 	}
+	
+	$scope.consult = function() {
+		$state.go('loading');
+		setTimeout(function() {
+			$state.go('threeCard', {'deck': 'all'});
+		}, 1500);
+	}
 });

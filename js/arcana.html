@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div ng-if="decks.indexOf(deck) + 1 == decks.length"class="space col s12 m12 l6">
-				<div class="space tarot-button">{{buttonOne}}</div>
+				<div ng-click="consult()" class="space tarot-button">{{buttonOne}}</div>
 				<div ng-click="explore()" class="space tarot-button">{{buttonTwo}}</div>
 			</div>
 		</div>
