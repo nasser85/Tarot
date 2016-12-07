@@ -123,13 +123,25 @@ nav {
 
 }
 
-.flip-vertical {
+.redfont {
+  font-size: 25px;
+  color: magenta;
+}
+.greenfont {
+  font-size: 25px;
+  color: lightgreen;
+}
+.flip {
     -moz-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
     filter: flipv; /*IE*/
 }
 
+#loading {
+  width: 30%;
+  margin-left: 35%;
+}
 .space {
   margin-top: 5%;
 }
@@ -163,6 +175,12 @@ nav {
   font-size: 70px;
   text-align: center;
   color: lightgreen;
+}
+.instructions {
+  font-family: generalFont;
+  font-size: 50px;
+  text-align: center;
+  color: magenta;
 }
 
 .modal-header {

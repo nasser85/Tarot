@@ -1,4 +1,4 @@
-app.factory('ReadingFactory', ['TarotFactory', function() {
+app.factory('ReadingFactory', ['TarotFactory', function(TarotFactory) {
 	var readingFactory = {};
 
 	readingFactory.drawCards = function(deck, number) {
