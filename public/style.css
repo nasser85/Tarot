@@ -53,6 +53,14 @@ body {
 nav {
   font-family: generalFont;
 }
+footer {
+  padding: 10px;
+  font-family: generalFont;
+}
+footer h5 {
+  width: 80%;
+  margin-left: 10%;
+}
 .nav-links {
   color: purple;
   font-size: 25px !important;
@@ -80,6 +88,18 @@ nav {
 .tarot-button:hover {
   color: purple;
   border-color: purple;
+}
+
+.bottom-buttons {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bottom-buttons:hover i {
+  color: magenta;
+}
+.bottom-buttons:hover h3 {
+  color: lightgreen;
 }
 
 #modal-button {
@@ -164,6 +184,10 @@ nav {
   z-index: 999;
   overflow: scroll;
   border-radius: 5px;
+}
+
+#bottom {
+  margin-bottom: 0px !important;
 }
 
 #modal-image {
