@@ -1,10 +1,10 @@
-<div id="one-card">
+<div id="career">
 	<div class="row z-depth-5" ng-if="modal" id="card-modal">
 		<div class="col s12 m4 l4">
 			<img id="modal-image" class="tarot-spread" src="{{cardImage}}">
 		</div>
 		<div class="col s12 m7 l7">
-			<p class="center-align">Your current state is represented by...</p>
+			<p class="center-align">Your current job's <span class="positionfont">{{position}}</span> is revealed through...</p>
 			<h3 class="modal-header">{{cardName}}</h3>
 			<p class="center-align" ng-if="orientation == 0">...in the <span class="greenfont">upright</span> position which typically points to <em>{{upright}}</em></p>
 			<p class="center-align" ng-if="orientation == 1">...in the <span class="redfont">reversed</span> position which typically points to <em>{{reversed}}</em></p>
@@ -13,10 +13,10 @@
 		</div>
 	</div>
 	<div class="row">
-		<h1 class="intro">Your <span class="red-text">Current Situation</span> Reading</h1>
-		<h2 class="instructions">Click on the card to gain more insight</h2>
-		<div ng-repeat="card in cards" class="col s4 offset-s4 m2 offset-m5 l2 offset-l5">
-			<div ng-click="openModal(card)" class="tarot-explanation">
+		<h1 class="intro">Your <span class="red-text">Career</span> Reading</h1>
+		<h2 class="instructions">Click on each individual card to gain more insight</h2>
+		<div ng-click="openModal(card)" ng-repeat="card in cards" class="col s12 m4 l4">
+			<div class="tarot-explanation">
 				<div class="description">
 					<h3>{{card.card.name}}</h3>
 					<p ng-if="card.orientation == 0" class="greenfont">Upright</P>

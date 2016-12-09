@@ -1,0 +1,10 @@
+<div id="tarot-spreads">
+	<div class="row">
+		<h1 class="intro">Tarot Spreads</h1>
+		<h2 class="instructions">Click on each spread to learn more</h2>
+		<div ui-sref="singleSpread({type: spreads.indexOf(spread)})"ng-repeat="spread in spreads" class="spread col s12 m6 l3">
+			<h3 class="spread-title">{{spread.name}}</h3>
+			<img class="spread-image" src="{{spread.image}}">
+		</div>
+	</div>
+</div>

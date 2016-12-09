@@ -1,0 +1,19 @@
+<div id="single-spread">
+	<div class="row">
+		<h1 class="intro">The <span class="red-text">{{spread.name}}</span> Reading</h1>
+		<div class="col s12 m6 l6">
+			<img class="spread-modal" src="{{spread.image}}">
+		</div>
+		<div class="col s10 m4 l4 offset-s1"> 
+			<p class="white-text">{{spread.description}}</p>
+		</div>
+		<div class="col s12">
+			<div class="space col s12 m6 l6">
+					<div ng-click="consult()" class="space tarot-button">Get a reading</div>
+			</div>
+			<div class="space col s12 m6 l6">
+					<div ui-sref="spreads" class="space tarot-button">Back to spreads</div>
+			</div>
+		</div>
+	</div>
+</div>

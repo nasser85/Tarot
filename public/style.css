@@ -152,6 +152,11 @@ footer h5 {
   color: lightgreen;
 }
 
+.positionfont {
+  font-size: 25px;
+  color: red;
+}
+
 .upright {
   color: lightgreen;
 }
@@ -164,6 +169,29 @@ footer h5 {
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
     filter: flipv; /*IE*/
+}
+
+.spread-modal {
+  width: 90%;
+  margin-left: 5%;
+   -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.spread-image {
+  width: 80%;
+  margin-left: 10%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.spread:hover .spread-image {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.spread:hover .spread-title {
+  color: lightgreen;
 }
 
 #loading {
@@ -213,6 +241,12 @@ footer h5 {
   font-size: 50px;
   text-align: center;
   color: magenta;
+}
+.spread-title {
+  font-family: generalFont;
+  font-size: 40px;
+  text-align: center;
+  color: white;
 }
 
 .modal-header {
